@@ -10,32 +10,135 @@ body {
 header {
     background-color: #eeeeee;
     box-sizing: border-box;
-    height: 340px;
+    height: 545px;
     color: #000000;
     }
-
+.active {
+    padding-bottom: 5px;
+    border-bottom: 2px solid #fb565a;
+}
+.logo:hover{
+    opacity: 0.8;
+}
+.logo:active {
+    opacity: 0.3;
+}
 .conteiner_header{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding-top: 3%;
+    padding-bottom: 20px;
+
+    a:hover{
+    color: #fb565a;
+    }
+    a:active{
+    color:#a7a7a7
+    }
+
 }
 
-.nav_a {
+.link {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 30px;
     text-transform: uppercase;
     text-decoration: none;
     color: #000000;
     margin-right: 20px;
 }
-.basket_li {
-    margin-right: 20px;
+.basket {
+    .basket_link{
+        margin-right: 20px;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #000000;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
 }
-.head_name {
- text-align: center;
-font-size: 55px;
-font-weight: 500;
-line-height: 55px;
- }
+.slider_roll{
+    position: absolute;
+    left: 45%;
+    top: 465px;
+    
+    #slider1, #slider2, #slider3 {
+        cursor: pointer;
+        margin-right: 10px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+      }
+    .activeted {
+     border: 1px solid black !important;
+     border-radius: 10px;
+    }
+}
+
+.conteiner_slide1 {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.header_slider{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+     .index_h1{
+        font-size: 55px;
+        font-weight: 900;
+        line-height: 55px;
+    }
+    .description_head{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        padding-bottom: 5%;
+    }
+    .lern_more {
+    width: 240px;
+    height: 50px;
+    background-color: #fb565a;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    }
+    .lern_more:hover {
+    background-color: #e74246;
+    
+    }
+    .lern_more:active {
+    background-color: #d7373b;
+    color: #e37376;
+    }
+    
+}
+.slide_image{
+    margin-right: 100px;
+   }
+.one {
+    max-width: 385px;
+}
+.two {
+    max-width: 540px;
+}
+.three {
+    max-width: 410px;
+}
+.conteiner_slide2 {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.conteiner_slide3 {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.visible {
+    display: flex !important;
+}
