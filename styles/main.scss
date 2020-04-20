@@ -7,6 +7,8 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
+
+// header
 header {
     background-color: #eeeeee;
     box-sizing: border-box;
@@ -36,7 +38,6 @@ header {
     a:active{
     color:#a7a7a7
     }
-
 }
 
 .link {
@@ -63,7 +64,6 @@ header {
     position: absolute;
     left: 45%;
     top: 465px;
-    
     #slider1, #slider2, #slider3 {
         cursor: pointer;
         margin-right: 10px;
@@ -84,8 +84,7 @@ header {
 .header_slider{
     display: flex;
     flex-direction: column;
-    align-items: right;
-     .index_h1{
+      .index_h1{
         font-size: 55px;
         font-weight: 900;
         line-height: 55px;
@@ -104,7 +103,7 @@ header {
     font-size: 16px;
     font-weight: 500;
     line-height: 18px;
-    border-radius: 12px;
+    border-radius: 8px;
     cursor: pointer;
     }
     .lern_more:hover {
@@ -141,4 +140,62 @@ header {
 }
 .visible {
     display: flex !important;
+}
+
+// main Advantages
+main {
+max-width: 1180px;
+margin: 0 auto;
+box-sizing: border-box;  
+}
+
+.container_advantages {
+    height: 510px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #eeeeee;
+   .adv_name{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-transform: uppercase;
+    }
+
+   .adv_description {
+    max-width: 250px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    }
+    .order {
+    width: 160px;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+     }
+     .red {
+        background-color: #fb565a;
+    }
+    .red:hover { background-color: #e74246;  }
+    .red:active {
+        background-color: #d7373b;
+        color: #e37376;
+        }
+    .green{   background-color: #00ca74;  }
+    .green:hover { background-color: #00bc6c;  }
+    .green:active {
+        background-color: #00aa62;
+        color: #3dbe88;
+        }
+    .yellow {  background-color: #efc84a;  }
+    .yellow:hover { background-color: #eab534;  }
+    .yellow:active {
+        background-color: #e5a722;
+        color: #edc164;;
+         }
 }

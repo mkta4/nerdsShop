@@ -106,9 +106,6 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
 }
 
 .header_slider .index_h1 {
@@ -132,7 +129,7 @@ header {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  border-radius: 12px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -183,5 +180,89 @@ header {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+}
+
+main {
+  max-width: 1180px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container_advantages {
+  height: 510px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.container_advantages .adv_name {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.container_advantages .adv_description {
+  max-width: 250px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.container_advantages .order {
+  width: 160px;
+  height: 50px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.container_advantages .red {
+  background-color: #fb565a;
+}
+
+.container_advantages .red:hover {
+  background-color: #e74246;
+}
+
+.container_advantages .red:active {
+  background-color: #d7373b;
+  color: #e37376;
+}
+
+.container_advantages .green {
+  background-color: #00ca74;
+}
+
+.container_advantages .green:hover {
+  background-color: #00bc6c;
+}
+
+.container_advantages .green:active {
+  background-color: #00aa62;
+  color: #3dbe88;
+}
+
+.container_advantages .yellow {
+  background-color: #efc84a;
+}
+
+.container_advantages .yellow:hover {
+  background-color: #eab534;
+}
+
+.container_advantages .yellow:active {
+  background-color: #e5a722;
+  color: #edc164;
 }
 /*# sourceMappingURL=main.css.map */
