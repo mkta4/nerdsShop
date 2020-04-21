@@ -312,4 +312,36 @@ main {
 .container_description .description .types_order .redline {
   margin-right: 10px;
 }
+
+.examples {
+  height: 185px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #eeeeee;
+  cursor: pointer;
+}
+
+.examples .exaple {
+  opacity: 0.2;
+}
+
+.examples .bord {
+  padding-right: 5%;
+  border-right: 2px solid #eeeeee;
+}
+
+.examples .exaple:hover {
+  opacity: 1;
+}
+
+.examples .exaple:active {
+  opacity: .1;
+}
 /*# sourceMappingURL=main.css.map */

@@ -199,7 +199,7 @@ box-sizing: border-box;
         color: #edc164;;
          }
 }
-//main description
+//main Description
 .container_description{
     height: 525px;
     display: flex;
@@ -233,5 +233,27 @@ box-sizing: border-box;
                 margin-right: 10px;
             }  
         }
+    }
+}
+//main Examples
+.examples{
+    height: 185px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #eeeeee;
+    cursor: pointer;
+    .exaple {
+        opacity: 0.2;
+    }
+    .bord {
+        padding-right: 5%;
+        border-right: 2px solid #eeeeee;
+    }
+    .exaple:hover {
+        opacity: 1;
+    }
+    .exaple:active {
+        opacity: .1;
     }
 }
