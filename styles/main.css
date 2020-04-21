@@ -344,4 +344,52 @@ main {
 .examples .exaple:active {
   opacity: .1;
 }
+
+.maps {
+  margin-top: 5%;
+  max-width: 1180px;
+  height: 450px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+footer {
+  max-width: 1180px;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 217px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .social_link {
+  opacity: .3;
+}
+
+footer .social_link:hover {
+  opacity: 1;
+}
+
+footer .social_link:active {
+  opacity: .6;
+}
+
+footer .discount_name {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+footer .discount_description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
 /*# sourceMappingURL=main.css.map */
