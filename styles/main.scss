@@ -120,13 +120,13 @@ header {
     margin-right: 100px;
    }
 .one {
-    max-width: 385px;
+    max-width: 510px;
 }
 .two {
-    max-width: 540px;
+    max-width: 510px;
 }
 .three {
-    max-width: 410px;
+    max-width: 510px;
 }
 .conteiner_slide2 {
     display: none;
@@ -198,4 +198,40 @@ box-sizing: border-box;
         background-color: #e5a722;
         color: #edc164;;
          }
+}
+//main description
+.container_description{
+    height: 525px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid #eeeeee;
+    .description {
+        max-width: 620px;
+            .desc_name{
+            font-size: 45px;
+            font-weight: 600;
+            line-height: 45px;
+        }
+            .desc_description {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+        .order_name {
+           font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .types_order {
+            display: block;
+            font-weight: 400;    
+            margin-bottom: 3%; 
+            .redline{
+                margin-right: 10px;
+            }  
+        }
+    }
 }

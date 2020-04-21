@@ -147,15 +147,15 @@ header {
 }
 
 .one {
-  max-width: 385px;
+  max-width: 510px;
 }
 
 .two {
-  max-width: 540px;
+  max-width: 510px;
 }
 
 .three {
-  max-width: 410px;
+  max-width: 510px;
 }
 
 .conteiner_slide2 {
@@ -264,5 +264,52 @@ main {
 .container_advantages .yellow:active {
   background-color: #e5a722;
   color: #edc164;
+}
+
+.container_description {
+  height: 525px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid #eeeeee;
+}
+
+.container_description .description {
+  max-width: 620px;
+}
+
+.container_description .description .desc_name {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 45px;
+}
+
+.container_description .description .desc_description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.container_description .description .order_name {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.container_description .description .types_order {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 3%;
+}
+
+.container_description .description .types_order .redline {
+  margin-right: 10px;
 }
 /*# sourceMappingURL=main.css.map */
