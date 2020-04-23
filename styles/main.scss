@@ -35,7 +35,6 @@ header {
     align-items: center;
     padding-top: 3%;
     padding-bottom: 20px;
-
     a:hover{
     color: #fb565a;
     }
@@ -45,7 +44,7 @@ header {
 }
 
 .link {
-      font-weight: 700;
+    font-weight: 700;
     line-height: 30px;
     text-transform: uppercase;
     text-decoration: none;
@@ -117,10 +116,6 @@ header {
     }
     
 }
-.slide_image{
-    max-width: 40%;
-   }
-
 .conteiner_slide2 {
     display: none;
     justify-content: space-around;
@@ -133,7 +128,7 @@ header {
 }
 .visible {
     display: flex !important;
-    transition-duration: .2s;
+   
 }
 
 // main Advantages
@@ -240,7 +235,7 @@ box-sizing: border-box;
         padding-right: 5%;
         border-right: 2px solid #eeeeee;
     }
-    .exaple:hover {
+       .exaple:hover {
         opacity: 1;
     }
     .exaple:active {
@@ -314,51 +309,87 @@ align-items: center;
     @extend %burger-line;
     top: calc(50% - 1.5px);
 }
-
+// media
 @media screen and (max-width: 768px){
-    header {
-        max-width: 768px;
+    button {
+        font-weight: 600;
+        font-size: 1.8rem;
     }
+     
+// media header
+header {
+    max-width: 768px;
+    height: max-content;
     .burger  {
         display: inline-block;
     }
     nav {
         display: none;
     }
-.conteiner_header2{
-    overflow: hidden;
-    .header_slider{
-        height: 305px;
-        max-width: 250px;
+        .conteiner_slide1, .conteiner_slide2, .conteiner_slide3 {
+        flex-direction: column;
+     }
+     .conteiner_header2{
+        overflow: hidden;
+        .slider_roll{
+            top: 530px;
+        }
+           .header_slider{
+            max-height: 310px;
+            max-width: 70%;
+        }
+        .index_h1 {
+            font-size: 2.2em;
+            line-height: 34px;
+            }
+           .description_head{
+               font-size: 1.5rem;
+               font-weight: 550;
+               line-height: 20px;
+              }
+            .slide_image {
+             width: 466px;
+             height: 272px;
+            }
     }
-    .index_h1 {
-        font-size: 2.1em !important;
-        line-height: 34px !important;
-        }
-       .description_head{
-           font-size: 1.2rem;
-           font-weight: 550;
-           line-height: 20px;
-          }
-        .slide__image {
-            width: 466px;
-            height: 272px;
-        }
-}
+    }
+   
+// media main
+main{
+    padding-left: 10px;
     
-     .container_advantages{
-         flex-direction: column;
-         height: 1100px;
-         .advantages{
-             padding-bottom: 15px;
-             text-align: center;
-                .adv_description{
-                    max-width: 100%;
-                }
-         }
-     }
-     .desc_name{
-         font-size: 1.8em !important;
-     }
+    .container_advantages{
+        flex-direction: column;
+        height: 1100px;
+        .advantages{
+            padding-bottom: 15px;
+            text-align: center;
+               .adv_description{
+                   max-width: 100%;
+               }
+        }
+    }
+    .container_description {
+       height: max-content;
+       flex-wrap: wrap;
+       font-size: 1.3rem;
+       .types_order{
+           font-size: 1.6rem;
+       }
+    }
+    .examples {
+        flex-wrap: wrap;
+        height: 400px;
+        justify-content: space-around;
+        align-items: center;
+    }
 
+}
+// media footer
+footer{
+    flex-direction: column;
+    }
+    .discount {
+        font-size: 1.3rem;
+    }
 }
