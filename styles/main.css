@@ -1,7 +1,12 @@
+html {
+  font-size: 10px;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.6em;
 }
 
 .wrapper {
@@ -52,7 +57,6 @@ header {
 }
 
 .link {
-  font-size: 16px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
@@ -63,7 +67,6 @@ header {
 
 .basket .basket_link {
   margin-right: 20px;
-  font-size: 16px;
   font-weight: 700;
   line-height: 30px;
   color: #000000;
@@ -74,7 +77,7 @@ header {
 .slider_roll {
   position: absolute;
   left: 45%;
-  top: 465px;
+  top: 480px;
 }
 
 .slider_roll #slider1, .slider_roll #slider2, .slider_roll #slider3 {
@@ -106,19 +109,19 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  max-width: 35%;
 }
 
 .header_slider .index_h1 {
-  font-size: 55px;
+  font-size: 3.2em;
   font-weight: 900;
-  line-height: 55px;
+  line-height: 50px;
 }
 
 .header_slider .description_head {
-  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  padding-bottom: 5%;
+  padding-bottom: 10px;
 }
 
 .header_slider .lern_more {
@@ -126,7 +129,6 @@ header {
   height: 50px;
   background-color: #fb565a;
   color: #ffffff;
-  font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   border-radius: 8px;
@@ -143,19 +145,7 @@ header {
 }
 
 .slide_image {
-  margin-right: 100px;
-}
-
-.one {
-  max-width: 510px;
-}
-
-.two {
-  max-width: 510px;
-}
-
-.three {
-  max-width: 510px;
+  max-width: 40%;
 }
 
 .conteiner_slide2 {
@@ -180,6 +170,8 @@ header {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
+  -webkit-transition-duration: .2s;
+          transition-duration: .2s;
 }
 
 main {
@@ -203,7 +195,7 @@ main {
 }
 
 .container_advantages .adv_name {
-  font-size: 24px;
+  font-size: 1.4em;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
@@ -211,7 +203,6 @@ main {
 
 .container_advantages .adv_description {
   max-width: 250px;
-  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
@@ -222,7 +213,6 @@ main {
   border-radius: 8px;
   cursor: pointer;
   color: #ffffff;
-  font-size: 16px;
   font-weight: 500;
   line-height: 18px;
 }
@@ -284,19 +274,17 @@ main {
 }
 
 .container_description .description .desc_name {
-  font-size: 45px;
+  font-size: 2.8em;
   font-weight: 600;
   line-height: 45px;
 }
 
 .container_description .description .desc_description {
-  font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .container_description .description .order_name {
-  font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   font-weight: 700;
@@ -382,14 +370,93 @@ footer .social_link:active {
 }
 
 footer .discount_name {
-  font-size: 36px;
+  font-size: 2em;
   font-weight: 700;
   line-height: 36px;
 }
 
 footer .discount_description {
-  font-size: 16px;
   font-weight: 400;
   line-height: 22px;
+}
+
+.burger::before, .burger::after, .burger__line {
+  display: inline-block;
+  position: absolute;
+  background-color: #173a56;
+  border-radius: 5px;
+  width: 100%;
+  height: 3px;
+  content: "";
+}
+
+.burger {
+  display: none;
+  width: 30px;
+  height: 25px;
+  position: relative;
+}
+
+.burger::before {
+  top: 0;
+  left: 0;
+}
+
+.burger::after {
+  bottom: 0;
+  left: 0;
+}
+
+.burger__line {
+  top: calc(50% - 1.5px);
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    max-width: 768px;
+  }
+  .burger {
+    display: inline-block;
+  }
+  nav {
+    display: none;
+  }
+  .conteiner_header2 {
+    overflow: hidden;
+  }
+  .conteiner_header2 .header_slider {
+    height: 305px;
+    max-width: 250px;
+  }
+  .conteiner_header2 .index_h1 {
+    font-size: 2.1em !important;
+    line-height: 34px !important;
+  }
+  .conteiner_header2 .description_head {
+    font-size: 1.2rem;
+    font-weight: 550;
+    line-height: 20px;
+  }
+  .conteiner_header2 .slide__image {
+    width: 466px;
+    height: 272px;
+  }
+  .container_advantages {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 1100px;
+  }
+  .container_advantages .advantages {
+    padding-bottom: 15px;
+    text-align: center;
+  }
+  .container_advantages .advantages .adv_description {
+    max-width: 100%;
+  }
+  .desc_name {
+    font-size: 1.8em !important;
+  }
 }
 /*# sourceMappingURL=main.css.map */

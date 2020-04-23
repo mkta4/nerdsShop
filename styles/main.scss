@@ -1,7 +1,11 @@
+html {
+    font-size: 10px;
+    }
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
 }
 .wrapper {
     max-width: 1440px;
@@ -41,8 +45,7 @@ header {
 }
 
 .link {
-    font-size: 16px;
-    font-weight: 700;
+      font-weight: 700;
     line-height: 30px;
     text-transform: uppercase;
     text-decoration: none;
@@ -52,7 +55,6 @@ header {
 .basket {
     .basket_link{
         margin-right: 20px;
-        font-size: 16px;
         font-weight: 700;
         line-height: 30px;
         color: #000000;
@@ -63,7 +65,7 @@ header {
 .slider_roll{
     position: absolute;
     left: 45%;
-    top: 465px;
+    top: 480px;
     #slider1, #slider2, #slider3 {
         cursor: pointer;
         margin-right: 10px;
@@ -84,23 +86,22 @@ header {
 .header_slider{
     display: flex;
     flex-direction: column;
+    max-width: 35%;
       .index_h1{
-        font-size: 55px;
+        font-size: 3.2em;
         font-weight: 900;
-        line-height: 55px;
+        line-height: 50px;
     }
     .description_head{
-        font-size: 16px;
         font-weight: 400;
         line-height: 24px;
-        padding-bottom: 5%;
+        padding-bottom: 10px;
     }
     .lern_more {
     width: 240px;
     height: 50px;
     background-color: #fb565a;
     color: #ffffff;
-    font-size: 16px;
     font-weight: 500;
     line-height: 18px;
     border-radius: 8px;
@@ -117,17 +118,9 @@ header {
     
 }
 .slide_image{
-    margin-right: 100px;
+    max-width: 40%;
    }
-.one {
-    max-width: 510px;
-}
-.two {
-    max-width: 510px;
-}
-.three {
-    max-width: 510px;
-}
+
 .conteiner_slide2 {
     display: none;
     justify-content: space-around;
@@ -140,6 +133,7 @@ header {
 }
 .visible {
     display: flex !important;
+    transition-duration: .2s;
 }
 
 // main Advantages
@@ -156,7 +150,7 @@ box-sizing: border-box;
     align-items: center;
     border-bottom: 2px solid #eeeeee;
    .adv_name{
-    font-size: 24px;
+    font-size: 1.4em;
     font-weight: 700;
     line-height: 30px;
     text-transform: uppercase;
@@ -164,7 +158,6 @@ box-sizing: border-box;
 
    .adv_description {
     max-width: 250px;
-    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     }
@@ -174,7 +167,6 @@ box-sizing: border-box;
     border-radius: 8px;
     cursor: pointer;
     color: #ffffff;
-    font-size: 16px;
     font-weight: 500;
     line-height: 18px;
      }
@@ -209,17 +201,15 @@ box-sizing: border-box;
     .description {
         max-width: 620px;
             .desc_name{
-            font-size: 45px;
+            font-size:  2.8em;
             font-weight: 600;
             line-height: 45px;
         }
             .desc_description {
-            font-size: 16px;
-            font-weight: 400;
+             font-weight: 400;
             line-height: 24px;
         }
         .order_name {
-           font-size: 16px;
             font-weight: 500;
             line-height: 24px;
             font-weight: 700;
@@ -284,13 +274,91 @@ align-items: center;
         opacity: .6;
     }
     .discount_name {
-    font-size: 36px;
+    font-size: 2em;
     font-weight: 700;
     line-height: 36px;
     }
     .discount_description {
-    font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     }
+}
+
+// media
+%burger-line {
+    display: inline-block;
+    position: absolute;
+    background-color: #173a56;
+    border-radius: 5px;
+    width: 100%;
+    height: 3px;
+    content: "";
+}
+.burger  {
+    display: none;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    &::before {
+        @extend %burger-line;
+        top: 0;
+        left: 0;
+    }
+    &::after {
+        @extend %burger-line;
+        bottom: 0;
+        left: 0;
+    }
+}
+.burger__line {
+    @extend %burger-line;
+    top: calc(50% - 1.5px);
+}
+
+@media screen and (max-width: 768px){
+    header {
+        max-width: 768px;
+    }
+    .burger  {
+        display: inline-block;
+    }
+    nav {
+        display: none;
+    }
+.conteiner_header2{
+    overflow: hidden;
+    .header_slider{
+        height: 305px;
+        max-width: 250px;
+    }
+    .index_h1 {
+        font-size: 2.1em !important;
+        line-height: 34px !important;
+        }
+       .description_head{
+           font-size: 1.2rem;
+           font-weight: 550;
+           line-height: 20px;
+          }
+        .slide__image {
+            width: 466px;
+            height: 272px;
+        }
+}
+    
+     .container_advantages{
+         flex-direction: column;
+         height: 1100px;
+         .advantages{
+             padding-bottom: 15px;
+             text-align: center;
+                .adv_description{
+                    max-width: 100%;
+                }
+         }
+     }
+     .desc_name{
+         font-size: 1.8em !important;
+     }
+
 }
