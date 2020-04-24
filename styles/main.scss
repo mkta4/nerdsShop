@@ -1,3 +1,5 @@
+@import "constants";
+
 html {
     font-size: 10px;
     }
@@ -14,14 +16,12 @@ body {
 
 // header
 header {
-    background-color: #eeeeee;
+    background-color: $color-border;
     box-sizing: border-box;
-    height: 545px;
-    color: #000000;
+     color: $color-text;
     }
 .active {
-    padding-bottom: 5px;
-    border-bottom: 2px solid #fb565a;
+    @extend %active-line;
 }
 .logo:hover{
     opacity: 0.8;
@@ -48,7 +48,7 @@ header {
     line-height: 30px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #000000;
+    color: $color-text;
     margin-right: 20px;
 }
 .basket {
@@ -56,7 +56,7 @@ header {
         margin-right: 20px;
         font-weight: 700;
         line-height: 30px;
-        color: #000000;
+        color: $color-text;
         text-transform: uppercase;
         text-decoration: none;
     }
@@ -127,9 +127,8 @@ header {
     align-items: center;
 }
 .visible {
-    display: flex !important;
-   
-}
+     display: $flex !important;
+    }
 
 // main Advantages
 main {
@@ -139,11 +138,11 @@ box-sizing: border-box;
 }
 
 .container_advantages {
-    height: 510px;
+    padding: 40px 0 40px;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid $color-border;
    .adv_name{
     font-size: 1.4em;
     font-weight: 700;
@@ -192,7 +191,7 @@ box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid $color-border;
     .description {
         max-width: 620px;
             .desc_name{
@@ -226,14 +225,14 @@ box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #eeeeee;
+    border-bottom: 2px solid $color-border;
     cursor: pointer;
     .exaple {
         opacity: 0.2;
     }
     .bord {
         padding-right: 5%;
-        border-right: 2px solid #eeeeee;
+        border-right: 2px solid $color-border;
     }
        .exaple:hover {
         opacity: 1;
@@ -252,43 +251,10 @@ cursor: pointer;
 }
 //footer
 footer {
-max-width: 1180px;
-margin: 0 auto;
-box-sizing: border-box;      
-height: 217px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-.social_link {
-    opacity: .3;
-    }
-    .social_link:hover{
-        opacity: 1;
-    }
-    .social_link:active{
-        opacity: .6;
-    }
-    .discount_name {
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 36px;
-    }
-    .discount_description {
-    font-weight: 400;
-    line-height: 22px;
-    }
+    @extend %futer;
 }
 
 // media
-%burger-line {
-    display: inline-block;
-    position: absolute;
-    background-color: #173a56;
-    border-radius: 5px;
-    width: 100%;
-    height: 3px;
-    content: "";
-}
 .burger  {
     display: none;
     width: 30px;
@@ -309,6 +275,7 @@ align-items: center;
     @extend %burger-line;
     top: calc(50% - 1.5px);
 }
+
 // media
 @media screen and (max-width: 768px){
     button {
@@ -326,7 +293,7 @@ header {
     nav {
         display: none;
     }
-        .conteiner_slide1, .conteiner_slide2, .conteiner_slide3 {
+    .conteiner_slide1, .conteiner_slide2, .conteiner_slide3 {
         flex-direction: column;
      }
      .conteiner_header2{
@@ -357,12 +324,10 @@ header {
 // media main
 main{
     padding-left: 10px;
-    
-    .container_advantages{
+     .container_advantages{
         flex-direction: column;
-        height: 1100px;
-        .advantages{
-            padding-bottom: 15px;
+           .advantages{
+            padding-bottom: 40px;
             text-align: center;
                .adv_description{
                    max-width: 100%;
