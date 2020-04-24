@@ -1,0 +1,12 @@
+@import "constants";
+
+//header
+.shop_name {
+   align-items: center;
+    .shop_name_h1{
+        padding: 2% 0 8% 25%;
+        @include font($size: 3.2em, $height: 55px, $weight: 600, $style: normal)
+    }
+    
+    
+}

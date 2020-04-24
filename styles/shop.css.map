@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,UAAU,CAAC;EACR,WAAW,EAAE,MAAM;CAOrB;;AARD,AAEI,UAFM,CAEN,aAAa,CAAA;EACT,OAAO,EAAE,WAAW;ECFxB,SAAS,EDGgB,KAAK;ECF9B,WAAW,EDE8B,IAAI;ECD7C,UAAU,EDC2D,MAAM;ECA3E,WAAW,EDA6C,GAAG;CAC1D",
+    "sources": [
+        "shop.scss",
+        "_constants.scss"
+    ],
+    "names": [],
+    "file": "shop.css"
+}

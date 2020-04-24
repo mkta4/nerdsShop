@@ -1,7 +1,12 @@
 $color-border: #eeeeee;
 $color-text: #000000;
 
-
+@mixin font  ($size, $height: $size, $weight: bold, $style: normal) {
+    font-size: $size;
+    line-height: $height;
+    font-style: $style;
+    font-weight: $weight;
+}
 
 // @extend
 %burger-line {
