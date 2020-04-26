@@ -35,6 +35,17 @@ body {
   display: flex !important;
 }
 
+.menu {
+  display: none;
+}
+
+.sub_menu {
+  text-align: center;
+  background-color: lightgrey;
+  border-radius: 4px;
+  opacity: .9;
+}
+
 header {
   background-color: #eeeeee;
   -webkit-box-sizing: border-box;
@@ -426,6 +437,35 @@ footer .discount_description {
 }
 
 @media screen and (max-width: 768px) {
+  #open:checked ~ .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #open {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+  }
+  .menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 160px;
+  }
+  .menu a {
+    font-size: 1.4em;
+    line-height: 40px;
+    font-style: normal;
+    font-weight: bold;
+  }
   button {
     font-weight: 600;
     font-size: 1.8rem;
@@ -455,9 +495,11 @@ footer .discount_description {
     top: 530px;
   }
   header .conteiner_header2 .header_slider {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-height: 310px;
     max-width: 70%;
-    padding-left: 20%;
   }
   header .conteiner_header2 .index_h1 {
     font-size: 2.2em;

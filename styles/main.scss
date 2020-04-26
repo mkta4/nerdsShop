@@ -13,115 +13,124 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
-
 .visible {
     display: flex !important;
    }
+.menu{
+    display: none;     
+}
+.sub_menu {
+    text-align: center;
+    background-color: lightgrey;
+    border-radius: 4px;
+    opacity: .9;
+}
 
 // header
 header {
     background-color: $color-border;
     box-sizing: border-box;
      color: $color-text;
-     // header navigation
-     .active { @extend %active-line;  }
-    .logo:hover{
-        opacity: 0.8;
+    // header navigation
+    .active { @extend %active-line;}
+.logo:hover{
+    opacity: 0.8;
+}
+.logo:active {
+    opacity: 0.3;
+}
+.conteiner_header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 3%;
+    padding-bottom: 20px;
+    a:hover{
+    color: #fb565a;
     }
-    .logo:active {
-        opacity: 0.3;
-    }
-    .conteiner_header{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding-top: 3%;
-        padding-bottom: 20px;
-        a:hover{
-        color: #fb565a;
-        }
-        a:active{
-        color:#a7a7a7
-        }
-    }
-    .link {
-        @include font ($size: 1em, $height: 30px, $weight: 700);
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $color-text;
-        margin-right: 20px;
-    }
-    .basket {
-        .basket_link{
-            margin-right: 20px;
-            @include font ($size: 1em, $height: 30px, $weight: 700);
-            color: $color-text;
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-    }
-    // header slider
-    .slider_roll{
-        position: absolute;
-        left: 45%;
-        top: 480px;
-        #slider1, #slider2, #slider3 {
-            cursor: pointer;
-            margin-right: 10px;
-            border: 1px solid #ffffff;
-            border-radius: 10px;
-          }
-        .activeted {
-         border: 1px solid black !important;
-         border-radius: 10px;
-        }
-    }
-    .conteiner_slide1 {
-        display: none;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .header_slider{
-        display: flex;
-        flex-direction: column;
-        max-width: 35%;
-          .index_h1{
-            @include font ($size: 3.2em, $height: 50px, $weight: 900);
-        }
-        .description_head{
-            @include font ($size: 1em, $height: 24px, $weight: 400);
-            padding-bottom: 10px;
-        }
-        .lern_more {
-        width: 240px;
-        height: 50px;
-        background-color: #fb565a;
-        color: #ffffff;
-        @include font ($size: 1em, $height: 18px, $weight: 500);
-        border-radius: 8px;
-        cursor: pointer;
-        }
-        .lern_more:hover {
-        background-color: #e74246;
-        
-        }
-        .lern_more:active {
-        background-color: #d7373b;
-        color: #e37376;
-        }
-        
-    }
-    .conteiner_slide2 {
-        display: none;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .conteiner_slide3 {
-        display: none;
-        justify-content: space-around;
-        align-items: center;
+    a:active{
+    color:#a7a7a7
     }
 }
+.link {
+    @include font ($size: 1em, $height: 30px, $weight: 700);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-text;
+    margin-right: 20px;
+}
+.basket {
+    .basket_link{
+        margin-right: 20px;
+        @include font ($size: 1em, $height: 30px, $weight: 700);
+        color: $color-text;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+// header slider
+.slider_roll{
+    position: absolute;
+    left: 45%;
+    top: 480px;
+    #slider1, #slider2, #slider3 {
+        cursor: pointer;
+        margin-right: 10px;
+        border: 1px solid #ffffff;
+        border-radius: 10px;
+      }
+    .activeted {
+     border: 1px solid black !important;
+     border-radius: 10px;
+    }
+}
+.conteiner_slide1 {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.header_slider{
+    display: flex;
+    flex-direction: column;
+    max-width: 35%;
+      .index_h1{
+                  @include font ($size: 3.2em, $height: 50px, $weight: 900);
+    }
+    .description_head{
+        @include font ($size: 1em, $height: 24px, $weight: 400);
+        padding-bottom: 10px;
+    }
+    .lern_more {
+    width: 240px;
+    height: 50px;
+    background-color: #fb565a;
+    color: #ffffff;
+    @include font ($size: 1em, $height: 18px, $weight: 500);
+    border-radius: 8px;
+    cursor: pointer;
+    }
+    .lern_more:hover {
+    background-color: #e74246;
+    
+    }
+    .lern_more:active {
+    background-color: #d7373b;
+    color: #e37376;
+    }
+    
+}
+.conteiner_slide2 {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.conteiner_slide3 {
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+}
+
 
 // main Advantages
 main {
@@ -144,7 +153,7 @@ box-sizing: border-box;
    .adv_description {
     max-width: 250px;
     @include font ($size: 1em, $height: 24px, $weight: 400);
-      }
+    }
     .order {
     width: 160px;
     height: 50px;
@@ -183,8 +192,8 @@ box-sizing: border-box;
     border-bottom: 2px solid $color-border;
     .description {
         max-width: 620px;
-            .desc_name{ @include font ($size: 2.8em, $height: 45px, $weight: 600); }
-            .desc_description { @include font ($size: 1em, $height: 24px, $weight: 400); }
+        .desc_name{ @include font ($size: 2.8em, $height: 45px, $weight: 600); }
+        .desc_description { @include font ($size: 1em, $height: 24px, $weight: 400); }
         .order_name {
             @include font ($size: 1em, $height: 24px, $weight: 600);
             text-transform: uppercase;
@@ -229,28 +238,27 @@ height: 450px;
 overflow: hidden;
 cursor: pointer;
 }
-
 //footer
 footer {
-    max-width: 1180px;
-    margin: 0 auto;
-    box-sizing: border-box;      
-    height: 217px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    .social_link {
-        opacity: .3;
-        }
-        .social_link:hover{
-            opacity: 1;
-        }
-        .social_link:active{
-            opacity: .6;
-        }
-        .discount_name { @include font ($size: 2em, $height: 36px, $weight: 700);}
-        .discount_description { @include font ($size: 1em, $height: 22px, $weight: 400); }
+max-width: 1180px;
+margin: 0 auto;
+box-sizing: border-box;      
+height: 217px;
+display: flex;
+justify-content: space-around;
+align-items: center;
+.social_link {
+    opacity: .3;
     }
+    .social_link:hover{
+        opacity: 1;
+    }
+    .social_link:active{
+        opacity: .6;
+    }
+    .discount_name { @include font ($size: 2em, $height: 36px, $weight: 700);}
+    .discount_description { @include font ($size: 1em, $height: 22px, $weight: 400); }
+}
 
 // media
 .burger  {
@@ -264,7 +272,7 @@ footer {
         left: 0;
     }
     &::after {
-        @extend %burger-line;   
+        @extend %burger-line;
         bottom: 0;
         left: 0;
     }
@@ -276,18 +284,42 @@ footer {
 
 // media
 @media screen and (max-width: 768px){
-    button {
-        font-weight: 600;
-        font-size: 1.8rem;
+// media burger menu
+#open:checked ~ .menu {
+    display: flex;
+}
+#open {
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 32px;
+    height: 32px;
+    opacity: 0;
+}
+   .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 160px;
+       a{
+    @include font ($size: 1.4em, $height: 40px);
     }
-     
+    }
+
+//media button
+button {
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+    
 // media header
 header {
     max-width: 768px;
     height: max-content;
     .burger  {
         display: inline-block;
-    }
+        }
     nav {
         display: none;
     }
@@ -300,12 +332,12 @@ header {
             top: 530px;
         }
            .header_slider{
+            align-items: center;
             max-height: 310px;
             max-width: 70%;
-            padding-left: 20%;
         }
         .index_h1 { @include font ($size: 2.2em, $height: 34px);  }
-           .description_head{ @include font ($size: 1.5em, $height: 20px, $weight: 550); }
+        .description_head{ @include font ($size: 1.5em, $height: 20px, $weight: 550); }
             .slide_image {
              width: 466px;
              height: 272px;
@@ -342,7 +374,6 @@ main{
     }
 
 }
-
 // media footer
 footer{flex-direction: column; }
     .discount { font-size: 1.3rem; }
