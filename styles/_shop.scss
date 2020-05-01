@@ -1,0 +1,137 @@
+@import "constants";
+
+//header
+.shop_name {
+   align-items: center;
+    .shop_name_h1{
+        padding: 2% 0 8% 25%;
+        @include font($size: 3.2em, $height: 55px, $weight: 600, $style: normal)
+    }
+    
+    
+}
+// main
+.shop-main {
+max-width: 1180px;
+margin: 0 auto;
+box-sizing: border-box;  
+display: flex;
+padding-left: 10px;
+
+
+    //Стоимость
+.shop-choice {
+        display: flex;
+        flex-direction: column; 
+        .shop-choice__cost{
+            @include font($size: 1.2em, $height: 30px, $weight: 700);
+            color: $color-text;
+             text-transform: uppercase;
+              padding-bottom: 30px;
+        }
+        .shop-choice__slider {
+        width: 260px;
+        height: 80px;
+        background-color: $color-border;
+        }
+        .shop-choice__difference {
+            label { padding: 0 10px 0 10px;  }
+
+            .shop-choce__number{
+                width: 80px;
+                height: 38px;
+                background-color: $color-border;
+                text-align: center;
+                font-size: 1em;
+                    }
+        }
+       // Сетка
+       .shop-choice__grid{
+           padding-bottom: 25px;
+           .shop-choice__grid-p {
+            @include font($size: 1.2em, $height: 30px, $weight: 700);
+            color: $color-text;
+            text-transform: uppercase;
+        }
+       }
+    // Особенности
+    .shop-choice__features {
+        padding-bottom: 25px;
+        .shop-choice__features-p{
+         @include font($size: 1.2em, $height: 30px, $weight: 700);
+         color: $color-text;
+         text-transform: uppercase; 
+        }
+    }
+
+    // Кнопка - Показать
+        .btn-show {
+        @include font ($size: 1em, $height: 18px);
+        @include butom ($width: 240px, $height: 50px, $background-color: $color-border,  $color: $color-text);
+        }
+    }
+    // Сортировка
+    .shop-sorting{
+        padding-left: 100px;
+        width: 100%;
+         display:flex;
+         flex-direction: column;
+        justify-content: space-between;
+        .shop-sorting__change{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+               .shop-sorting__change-p {
+                @include font($size: 1.2em, $height: 30px, $weight: 700);
+                color: $color-text;
+                text-transform: uppercase; 
+            }
+            .shop-sorting__type {
+                @include font($size: 1.5rem, $height: 18px, $weight: 400);
+                color: $color-text;
+                text-transform: uppercase; 
+                padding-right: 28px;
+            }
+            .arrow {
+                padding-right: 10px;
+            }
+        }
+       
+    }
+}
+// Галерея
+.shop-sorting__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    
+    .gallery_conteiner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      padding-right: 40px;
+      padding-bottom: 40px;
+       
+        .gallery_image{
+        max-height: 100%;
+        max-width: 100%;
+        }
+    }
+    
+}
+.shop-sorting_page {
+    .shop__btn-pages{
+        @include font ($size: 1em, $height: 18px);
+        @include butom ($width: 50px, $height: 50px, $background-color: $color-border,  $color: $color-text);
+        margin-right: 10px;
+        
+        }
+        .current{
+        border: 3px solid #dbdbdb;
+        background-color: #ffffff;
+        }
+    .shop__btn-next{
+        @include font ($size: 1em, $height: 18px);
+        @include butom ($width: 260px, $height: 50px, $background-color: $color-border,  $color: $color-text);
+    }
+}

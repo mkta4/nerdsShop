@@ -11,4 +11,35 @@
   font-style: normal;
   font-weight: 600;
 }
+
+.shop-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.shop-main .shop-choice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.shop-main .shop-choice .btn-show {
+  font-size: 1.6em;
+  line-height: 18px;
+  font-style: normal;
+  font-weight: bold;
+  width: 240px;
+  height: 50px;
+  background-color: #eeeeee;
+  color: #000000;
+  cursor: pointer;
+}
 /*# sourceMappingURL=shop.css.map */

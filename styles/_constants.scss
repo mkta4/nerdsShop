@@ -7,6 +7,15 @@ $color-text: #000000;
     font-style: $style;
     font-weight: $weight;
 }
+@mixin butom ($width: $width, $height: $height, $background-color: $background-color, $color: $color, $border-radius: 4px, $text-transform: uppercase, $cursor: pointer) {
+    width: $width;
+    height: $height;
+    background-color: $background-color;
+    color: $color;
+    border-radius: $border-radius;
+    text-transform: $text-transform;
+    cursor: $cursor;
+    }
 
 // @extend
 %burger-line {
@@ -24,30 +33,3 @@ $color-text: #000000;
     border-bottom: 2px solid #fb565a;
 }
 
-%footer-pack {
-max-width: 1180px;
-margin: 0 auto;
-box-sizing: border-box;      
-height: 217px;
-display: flex;
-justify-content: space-around;
-align-items: center;
-.social_link {
-    opacity: .3;
-    }
-    .social_link:hover{
-        opacity: 1;
-    }
-    .social_link:active{
-        opacity: .6;
-    }
-    .discount_name {
-    font-size: 2em;
-    font-weight: 700;
-    line-height: 36px;
-    }
-    .discount_description {
-    font-weight: 400;
-    line-height: 22px;
-    }
-}

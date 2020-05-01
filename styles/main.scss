@@ -1,4 +1,5 @@
 @import "constants";
+@import "shop";
 
 html {
     font-size: 10px;
@@ -251,7 +252,31 @@ cursor: pointer;
 }
 //footer
 footer {
-    @extend %futer;
+    max-width: 1180px;
+    margin: 0 auto;
+    box-sizing: border-box;      
+    height: 217px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .social_link {
+        opacity: .3;
+        }
+        .social_link:hover{
+            opacity: 1;
+        }
+        .social_link:active{
+            opacity: .6;
+        }
+        .discount_name {
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 36px;
+        }
+        .discount_description {
+        font-weight: 400;
+        line-height: 22px;
+        }
 }
 
 // media

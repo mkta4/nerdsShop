@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/shop.css">
+    
     <title>Nerds</title>
 </head>
 <body>
@@ -32,12 +32,91 @@
                 <a href="#" class="basket_link">Корзина</a>
             </div>
         </div>
+    <div class="shop_name">
+    <h1 class="shop_name_h1">Магазин готовых шаблонов</h1>
+    </div>
+</header>
 
-        <div class="shop_name">
-        <h1 class="shop_name_h1">Магазин готовых шаблонов</h1>
+
+<div class="shop-main">
+
+    <div class="shop-choice">
+        <div class="shop-choice__conteiner">
+            <p class="shop-choice__cost">Стоимость: </p>
+
+            <div class="shop-choice__slider"></div>
+
+            <div class="shop-choice__difference">
+               <p>  <label for="shop-choice__from">От</label>
+                <input type="number" class="shop-choce__number" id="shop-choice__from" placeholder="0">
+                 <label for="shop-choice__before">До</label>
+                <input type="number" class="shop-choce__number" id="shop-choice__before" placeholder="15 000">
+               </p> 
+
+            </div>
         </div>
-    </header>
 
+        <div class="shop-choice__grid"> 
+        <p class="shop-choice__grid-p">Сетка:</p> 
+        <p><input type="radio" name="btn-grid" id="grid-adaptive" checked> <label for="grid-adaptive">Адаптивная</label>  </p>
+        <p><input type="radio" name="btn-grid" id="grid-fix"> <label for="grid-fix">Фиксированная</label> </p>
+          <p><input type="radio" name="btn-grid" id="grid-rubber"> <label for="grid-rubber">Резиновая</label> </p> 
+
+        </div>
+
+        <div class="shop-choice__features"> <p class="shop-choice__features-p">Особенности:</p>   
+           <p><input type="checkbox" name="features" id="slider_" checked> <label for="slider_">Слайдер</label> </p> 
+           <p><input type="checkbox" name="features" id="feat_"><label for="feat_">Блок преимуществ</label></p> 
+           <p><input type="checkbox" name="features" id="news_" checked><label for="news_">Новости</label> </p>
+           <p><input type="checkbox" name="features" id="galery_"><label for="galery_">Галерея</label> </p> 
+           <p><input type="checkbox" name="features" id="basket_"><label for="basket_">Корзина</label> </p> 
+        </div>
+        <button class="btn-show">Показать</button>
+    </div>
+
+    <div class="shop-sorting">
+        <div class="shop-sorting__change">
+            <p class="shop-sorting__change-p">Сортировать:</p>
+            <div class="shop-sorting__change-conteiner">
+                <span class="shop-sorting__type">По цене</span>
+                <span class="shop-sorting__type">По типу</span>
+                <span class="shop-sorting__type">По названию</span>
+                 <span class="arrow bot"> ▼</span>
+                <span class="arrow top">▲</span>
+            </div>
+        </div>
+
+        <div class="shop-sorting__gallery"> 
+            <div class="gallery_conteiner">
+                <img src="/image/browser.png" alt="browser" class="browser gallery_image"><img src="/image/shop-friend.png" alt="shop-friend" class="gallery_image">
+            </div>
+            <div class="gallery_conteiner"> 
+                <img src="/image/browser.png" alt="browser" class="browser gallery_image"><img src="/image/shop-app.png" alt="shop-app" class="gallery_image">
+            </div>
+            <div class="gallery_conteiner"> 
+                <img src="/image/browser.png" alt="browser" class="browser gallery_image"><img src="/image/shop-barber.png" alt="shop-barber" class="gallery_image">
+            </div>
+            <div class="gallery_conteiner"> 
+                <img src="/image/browser.png" alt="browser" class="browser gallery_image"><img src="/image/shop-handmade.png" alt="shop-handmade" class="gallery_image">
+            </div>
+            <div class="gallery_conteiner">
+                <img src="/image/browser.png" alt="browser" class="browser gallery_image"><img src="/image/shop-lern.png" alt="shop-lern" class="gallery_image">
+            </div>
+            <div class="gallery_conteiner">
+                <img src="/image/browser.png" alt="browser" class="browser gallery_image"><img src="/image/shop-kvas.png" alt="shop-kvas" class="gallery_image">
+            </div>
+
+        </div>
+
+            <div class="shop-sorting_page">
+            <button class="shop__btn-pages current">1</button>
+            <button class="shop__btn-pages">2</button>
+            <button class="shop__btn-pages">3</button>
+            <button class="shop__btn-next">Cледующая</button>
+        </div>
+
+        </div>
+</div>
 
 
 
