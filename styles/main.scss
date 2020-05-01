@@ -145,11 +145,13 @@ header {
     display: none;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 .conteiner_slide3 {
     display: none;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 }
 
@@ -381,6 +383,17 @@ header {
         }
     nav {
         display: none;
+    }
+    .btn1{
+        @include position  ($position: absolute, $top: 65%, $left: 40%);
+        
+    }
+    .btn2{
+        @include position  ($position: absolute, $top: 65%, $left: 44%);
+        
+    }
+    .btn3{
+        @include position  ($position: absolute, $top: 65%, $left: 48%); 
     }
     .conteiner_slide1, .conteiner_slide2, .conteiner_slide3 {
         flex-direction: column;

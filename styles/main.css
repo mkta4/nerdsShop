@@ -221,6 +221,8 @@ header .conteiner_slide2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 header .conteiner_slide3 {
@@ -230,6 +232,8 @@ header .conteiner_slide3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 main {
@@ -568,6 +572,21 @@ footer .discount_description {
   }
   header nav {
     display: none;
+  }
+  header .btn1 {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+  }
+  header .btn2 {
+    position: absolute;
+    top: 65%;
+    left: 44%;
+  }
+  header .btn3 {
+    position: absolute;
+    top: 65%;
+    left: 48%;
   }
   header .conteiner_slide1, header .conteiner_slide2, header .conteiner_slide3 {
     -webkit-box-orient: vertical;
