@@ -29,12 +29,6 @@ body {
   margin: 0 auto;
 }
 
-.visible {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-}
-
 .menu {
   display: none;
 }
@@ -46,11 +40,27 @@ body {
   opacity: .9;
 }
 
-header {
+button:active, button:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+.background {
   background-color: #eeeeee;
+  max-width: 100%;
+}
+
+header {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #000000;
+}
+
+header .slide_image {
+  max-width: 100%;
 }
 
 header .logo:hover {
@@ -104,24 +114,6 @@ header .basket .basket_link {
   text-decoration: none;
 }
 
-header .slider_roll {
-  position: absolute;
-  left: 45%;
-  top: 480px;
-}
-
-header .slider_roll #slider1, header .slider_roll #slider2, header .slider_roll #slider3 {
-  cursor: pointer;
-  margin-right: 10px;
-  border: 1px solid #ffffff;
-  border-radius: 10px;
-}
-
-header .slider_roll .activeted {
-  border: 1px solid black !important;
-  border-radius: 10px;
-}
-
 header .conteiner_slide1 {
   display: none;
   -ms-flex-pack: distribute;
@@ -129,6 +121,48 @@ header .conteiner_slide1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header .slide {
+  display: none;
+}
+
+header .btn1 {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+}
+
+header .btn2 {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+}
+
+header .btn3 {
+  position: absolute;
+  top: 50%;
+  left: 48%;
+}
+
+header .btn1:checked ~ .conteiner_slide1 {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+header .btn2:checked ~ .conteiner_slide2 {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+header .btn3:checked ~ .conteiner_slide3 {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
 }
 
 header .header_slider {
@@ -142,11 +176,12 @@ header .header_slider {
   max-width: 35%;
 }
 
-header .header_slider .index_h1 {
+header .header_slider .index_name {
   font-size: 3.2em;
   line-height: 50px;
   font-style: normal;
   font-weight: 900;
+  padding-bottom: 15px;
 }
 
 header .header_slider .description_head {
@@ -202,6 +237,7 @@ main {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding-left: 10px;
 }
 
 .container_advantages {
@@ -215,6 +251,10 @@ main {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 2px solid #eeeeee;
+}
+
+.container_advantages .advantages__img {
+  max-width: 100%;
 }
 
 .container_advantages .adv_name {
@@ -321,16 +361,37 @@ main {
   font-style: normal;
   font-weight: 600;
   text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
-.container_description .description .types_order {
+.container_description .description .order__line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container_description .description .order__line .types_order {
   display: block;
   font-weight: 400;
   margin-bottom: 3%;
+  padding-left: 15px;
 }
 
-.container_description .description .types_order .redline {
-  margin-right: 10px;
+.container_description .description .order__line .redline {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.container_description .description .order__line .redline .redline__line {
+  position: absolute;
+  background-color: #fb565a;
+  border-radius: 5px;
+  width: 100%;
+  height: 3px;
+  content: "";
+  top: 25%;
 }
 
 .examples {
@@ -367,9 +428,7 @@ main {
 
 .maps {
   margin-top: 5%;
-  max-width: 1180px;
-  height: 450px;
-  overflow: hidden;
+  max-width: 100%;
   cursor: pointer;
 }
 
@@ -378,7 +437,7 @@ footer {
   margin: 0 auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 217px;
+  padding: 20px 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,16 +448,44 @@ footer {
           align-items: center;
 }
 
-footer .social_link {
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .social .social__div {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 26px;
+  height: 23px;
+  background-color: #e1e1e1;
+  border: 25px solid #e1e1e1;
+  border-radius: 100%;
+}
+
+footer .social .social__div .social__vk {
+  padding-top: 5px;
+}
+
+footer .social .social_link {
+  padding-right: 20px;
+}
+
+footer .social .social__div:hover {
+  background-color: #e74246;
+  border: 25px solid #e74246;
+}
+
+footer .social .social__div:active {
+  background-color: #d7373b;
+  border: 25px solid #d7373b;
+}
+
+footer .social .social__div:active img {
   opacity: .3;
-}
-
-footer .social_link:hover {
-  opacity: 1;
-}
-
-footer .social_link:active {
-  opacity: .6;
 }
 
 footer .discount_name {
@@ -491,17 +578,13 @@ footer .discount_description {
   header .conteiner_header2 {
     overflow: hidden;
   }
-  header .conteiner_header2 .slider_roll {
-    top: 530px;
-  }
   header .conteiner_header2 .header_slider {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    max-height: 310px;
     max-width: 70%;
   }
-  header .conteiner_header2 .index_h1 {
+  header .conteiner_header2 .index_name {
     font-size: 2.2em;
     line-height: 34px;
     font-style: normal;
@@ -512,13 +595,7 @@ footer .discount_description {
     line-height: 20px;
     font-style: normal;
     font-weight: 550;
-  }
-  header .conteiner_header2 .slide_image {
-    width: 466px;
-    height: 272px;
-  }
-  main {
-    padding-left: 10px;
+    padding-bottom: 15px;
   }
   main .container_advantages {
     -webkit-box-orient: vertical;
@@ -540,6 +617,7 @@ footer .discount_description {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     font-size: 1.3rem;
+    padding-bottom: 20px;
   }
   main .container_description .types_order {
     font-size: 1.6rem;
@@ -547,12 +625,15 @@ footer .discount_description {
   main .examples {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    height: 400px;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding: 25px 0 25px;
+  }
+  main .examples .bord {
+    border-right: hidden;
   }
   footer {
     -webkit-box-orient: vertical;

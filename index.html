@@ -8,9 +8,10 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="wrapper">
-   <header>
-        
+<div class="background"> 
+    <div class="wrapper">
+     <header>
+      
            <div class="conteiner_header">
 
                     <span class="burger">
@@ -28,13 +29,13 @@
                     
 
                     <div class="logo_div">
-                    <a class="logo" href="#"><img src="image/nerds-logo.png" alt="logo"></a>
+                    <h1><a class="logo" href="#"><img src="image/nerds-logo.png" alt="logo"></a></h1>
                     </div>
                      <nav>
                     <a href="#" class="link active">Студия</a>
                     <a href="#" class="link">Клиенты</a>
                     <a href="#" class="link">Магазин</a>
-                    <a href="#" class="link">Контакты</a>
+                    <a href="#footed_id" class="link">Контакты</a>
                     </nav>
                          <div class="basket">
                     <a href="#" class="basket_link"><img src="image/cart-icon.png" alt="Корзина"></a>
@@ -43,32 +44,32 @@
                 </div>
                                
     <div class="conteiner_header2">
-        <div class="slider_roll">
-            <img id="slider1" class="activeted" src="image/Shape_1.png" alt="circle">
-            <img id="slider2" src="image/Shape_1.png" alt="circle">
-            <img id="slider3" src="image/Shape_1.png" alt="circle">
-        </div>
-                        <div class="conteiner_slide1 visible">
+        
+        <input type="radio" class="btn1" name="btn" checked>
+        <input type="radio" class="btn2" name="btn">
+        <input type="radio" class="btn3"  name="btn">
+
+                        <div class="slide conteiner_slide1">
                             <div class="header_slider">
-                                <h1 class="index_h1">Долго, дорого, скрупулезно</h1>
+                                <div class="index_name">Долго, дорого, скрупулезно</div>
                                 <div class="description_head">Математически выверенный дизайн для вашего сайта или мобильного приложения.</div>
                                 <button class="lern_more">УЗНАТЬ БОЛЬШЕ</button>
                             </div>
                             <img class="slide_image" src="image/slider1_head.png" alt="phone">
                         </div>
                 
-                     <div class="conteiner_slide2">
+                     <div class="slide conteiner_slide2">
                         <div class="header_slider">
-                            <h1 class="index_h1">Любим математику как никто другой</h1>
+                            <div class="index_name">Любим математику как никто другой</div>
                             <div class="description_head">Никакого креатива, только математические формулы для расчета идеальных пропорций.</div>
                             <button class="lern_more">УЗНАТЬ БОЛЬШЕ</button>
                      </div>
                      <div class="slide_image"><img src="image/slider2_head.png" alt="pc"></div>
                      </div>
 
-                     <div class="conteiner_slide3">
+                     <div class="slide conteiner_slide3">
                         <div class="header_slider">
-                            <h1 class="index_h1">Только ночь, только хардкор</h1>
+                            <div class="index_name">Только ночь, только хардкор</div>
                             <div class="description_head">Работать днем, как все? Мы против этого. Ближе к полуночи работа только начинается.</div>
                             <button class="lern_more">УЗНАТЬ БОЛЬШЕ</button>
                      </div>
@@ -76,27 +77,30 @@
                      </div>
                
                 </div>
-  
-   </header>
+           
+         </header>
+    </div>
+</div>
 
+<div class="wrapper">
     <main>
         <div class="container_advantages">
                 <div class="advantages web">
-                    <img src="image/illustration1.png" alt="Notebook">
+                    <img class="advantages__img" src="image/illustration1.png" alt="Notebook">
                     <h2 class="adv_name">Веб-сайты</h2>
                     <h3 class="adv_description">Мир никогда не будет прежним после того как увидит ваш сайт!</h3>
                     <button class="order red">ЗАКАЗАТЬ</button>
                 </div>
             
                 <div class="advantages app">
-                    <img src="image/illustration2.png" alt="Phone">
+                    <img class="advantages__img" src="image/illustration2.png" alt="Phone">
                     <h2 class="adv_name">Приложения</h2>
                     <h3 class="adv_description">Покорите топ-10 приложений в AppStore и Google Play</h3>
                     <button class="order green">ЗАКАЗАТЬ</button>
                 </div>
                 
                 <div class="advantages present">
-                    <img src="image/illustration3.png" alt="Presentation">
+                    <img class="advantages__img" src="image/illustration3.png" alt="Presentation">
                     <h2 class="adv_name">Презентации</h2>
                     <h3 class="adv_description">Вы даже не подозреваете, насколько вы изумительны!</h3>
                     <button class="order yellow">ЗАКАЗАТЬ</button>
@@ -108,12 +112,20 @@
           <div class="description">
               <h2 class="desc_name">Мы — маленькая, но гордая дизайн-студия из Гомеля. </h2>
               <h3 class="desc_description">Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</h3>
-              <div>
-                  <h3 class="order_name">Выполняем заказы на разработку:</h3>
-                  <span class="types_order"><img class="redline" src="image/redline.png" alt="red line">Веб-сайтов любой сложности</span>
-                  <span class="types_order"><img class="redline" src="image/redline.png" alt="red line">Мобильных приложений для iOS и Android</span>
-                  <span class="types_order"><img class="redline" src="image/redline.png" alt="red line">Слайдшоу и видео для корпоративных презентаций</span>
-              </div>
+                   <div class="order_name">Выполняем заказы на разработку:</div>
+                   <div class="order__line">
+                        <span class="redline"><span class="redline__line"></span></span>
+                        <span class="types_order">Веб-сайтов любой сложности</span>
+                </div>
+                <div class="order__line">
+                        <span class="redline"><span class="redline__line"></span></span>
+                        <span class="types_order">Мобильных приложений для iOS и Android</span>
+                </div>
+                  <div class="order__line">
+                        <span class="redline"><span class="redline__line"></span></span>
+                        <span class="types_order"> Слайдшоу и видео для корпоративных презентаций</span>
+                </div>
+              
           </div>
 
           <div class="description_img">
@@ -132,12 +144,14 @@
         <img class="map_img"src="image/maps.png" alt="Maps">
     </div> 
 </main>
+</div>
 
-    <footer>
+<div class="wrapper">
+    <footer id="footed_id">
         <div class="social">
-           <a href="#"><img class="social_link" src="image/vk.png" alt="vk"></a> 
-            <a href="#"><img class="social_link" src="image/facebook.png" alt="facebook"></a>
-            <a href="#"><img class="social_link" src="image/instagram.png" alt="instagram"></a>
+            <a href="https://vk.com/" class="social_link"><div class="social__div"><img class="social__vk" src="image/vk-icon.png" alt="vk"></div></a>
+            <a href="https://www.facebook.com/" class="social_link"><div class="social__div"><img  src="image/fb-icon.png" alt="facebook"></div></a>
+            <a href="https://www.instagram.com/?hl=ru" class="social_link"> <div class="social__div"><img  src="image/insta-icon.png" alt="instagram"></div></a>
         </div>
 
         <div class="discount">
@@ -145,9 +159,8 @@
             <h3 class="discount_description">Скидка 10% для друзей из социальных сетей.</h3>
         </div>  
     </footer>
-
-
 </div>
+
 
     <script src="js/slider.js"></script>
 </body>

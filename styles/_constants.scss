@@ -7,6 +7,11 @@ $color-text: #000000;
     font-style: $style;
     font-weight: $weight;
 }
+@mixin position  ($position: absolute, $top: $top, $left: $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
 
 // @extend
 %burger-line {

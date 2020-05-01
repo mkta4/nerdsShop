@@ -1,5 +1,6 @@
 @import "constants";
 
+// общие стили
 html {
     font-size: 10px;
     }
@@ -13,9 +14,7 @@ body {
     max-width: 1440px;
     margin: 0 auto;
 }
-.visible {
-    display: flex !important;
-   }
+
 .menu{
     display: none;     
 }
@@ -25,14 +24,27 @@ body {
     border-radius: 4px;
     opacity: .9;
 }
+button:active, button:focus {
+    outline: none;
+  }
+button::-moz-focus-inner {
+    border: 0;
+  }
 
 // header
-header {
+.background {
     background-color: $color-border;
+    max-width: 100%;
+}
+header {
+   
     box-sizing: border-box;
      color: $color-text;
     // header navigation
     .active { @extend %active-line;}
+.slide_image {
+    max-width: 100%
+    }
 .logo:hover{
     opacity: 0.8;
 }
@@ -69,32 +81,42 @@ header {
     }
 }
 // header slider
-.slider_roll{
-    position: absolute;
-    left: 45%;
-    top: 480px;
-    #slider1, #slider2, #slider3 {
-        cursor: pointer;
-        margin-right: 10px;
-        border: 1px solid #ffffff;
-        border-radius: 10px;
-      }
-    .activeted {
-     border: 1px solid black !important;
-     border-radius: 10px;
-    }
-}
+
 .conteiner_slide1 {
     display: none;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
+.slide{
+    display: none;
+    }
+.btn1{
+    @include position  ($position: absolute, $top: 50%, $left: 44%) 
+}
+.btn2{
+    @include position  ($position: absolute, $top: 50%, $left: 46%) 
+}
+.btn3{
+    @include position  ($position: absolute, $top: 50%, $left: 48%) 
+}
+    .btn1:checked ~ .conteiner_slide1{
+    display: flex !important
+    }
+    .btn2:checked ~ .conteiner_slide2{
+    display: flex !important
+    }
+    .btn3:checked ~ .conteiner_slide3{
+    display: flex !important
+    }
+
 .header_slider{
     display: flex;
     flex-direction: column;
     max-width: 35%;
-      .index_h1{
+      .index_name{
                   @include font ($size: 3.2em, $height: 50px, $weight: 900);
+                  padding-bottom: 15px;
     }
     .description_head{
         @include font ($size: 1em, $height: 24px, $weight: 400);
@@ -137,6 +159,7 @@ main {
 max-width: 1180px;
 margin: 0 auto;
 box-sizing: border-box;  
+padding-left: 10px;
 }
 
 .container_advantages {
@@ -145,6 +168,8 @@ box-sizing: border-box;
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid $color-border;
+    .advantages__img{ max-width: 100%; }
+
    .adv_name{
     @include font ($size: 1.4em, $height: 30px, $weight: 700);
     text-transform: uppercase;
@@ -197,17 +222,35 @@ box-sizing: border-box;
         .order_name {
             @include font ($size: 1em, $height: 24px, $weight: 600);
             text-transform: uppercase;
+            padding-bottom: 20px;
         }
-        .types_order {
-            display: block;
-            font-weight: 400;    
-            margin-bottom: 3%; 
-            .redline{
-                margin-right: 10px;
-            }  
-        }
-    }
+        .order__line {
+            display: flex;
+            .types_order {
+                display: block;
+                font-weight: 400;    
+                margin-bottom: 3%; 
+                padding-left: 15px;
+            }      
+            .redline {
+                display: inline-block;
+                width: 30px;
+                height:30px;
+                position: relative;
+                .redline__line {
+                     position: absolute;
+                    background-color: #fb565a;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 3px;
+                    content: "";
+                    top: 25%;
+                  }
+             }   
+         } 
+     }
 }
+
 //main Examples
 .examples{
     height: 185px;
@@ -233,9 +276,7 @@ box-sizing: border-box;
 // main maps
 .maps {
 margin-top: 5%;
-max-width: 1180px;
-height: 450px;
-overflow: hidden;
+max-width: 100%;
 cursor: pointer;
 }
 //footer
@@ -243,19 +284,39 @@ footer {
 max-width: 1180px;
 margin: 0 auto;
 box-sizing: border-box;      
-height: 217px;
+padding: 20px 0 30px;
 display: flex;
 justify-content: space-around;
 align-items: center;
-.social_link {
-    opacity: .3;
-    }
-    .social_link:hover{
-        opacity: 1;
-    }
-    .social_link:active{
-        opacity: .6;
-    }
+.social {
+    display: flex;
+    .social__div {
+        text-align: center;
+        justify-content: center;
+        width: 26px;
+        height: 23px;
+        background-color: #e1e1e1;
+        border: 25px solid #e1e1e1;
+        border-radius: 100%;
+            .social__vk {
+                padding-top: 5px;
+            }
+        }
+        .social_link { padding-right: 20px; }
+        .social__div:hover{
+            background-color: #e74246;
+            border: 25px solid #e74246;
+        }
+        .social__div:active{
+            background-color: #d7373b;
+            border: 25px solid #d7373b;
+            img{
+                opacity: .3;
+            }
+        }
+           
+}
+
     .discount_name { @include font ($size: 2em, $height: 36px, $weight: 700);}
     .discount_description { @include font ($size: 1em, $height: 22px, $weight: 400); }
 }
@@ -302,9 +363,7 @@ align-items: center;
     top: 40px;
     left: 0;
     width: 160px;
-       a{
-    @include font ($size: 1.4em, $height: 40px);
-    }
+    a{ @include font ($size: 1.4em, $height: 40px); }
     }
 
 //media button
@@ -328,26 +387,21 @@ header {
      }
      .conteiner_header2{
         overflow: hidden;
-        .slider_roll{
-            top: 530px;
-        }
-           .header_slider{
+        .header_slider{
             align-items: center;
-            max-height: 310px;
             max-width: 70%;
         }
-        .index_h1 { @include font ($size: 2.2em, $height: 34px);  }
-        .description_head{ @include font ($size: 1.5em, $height: 20px, $weight: 550); }
-            .slide_image {
-             width: 466px;
-             height: 272px;
-            }
+        .index_name { @include font ($size: 2.2em, $height: 34px); }
+        .description_head{ 
+            @include font ($size: 1.5em, $height: 20px, $weight: 550); 
+            padding-bottom: 15px;
+        }
+            
     }
     }
    
 // media main
 main{
-    padding-left: 10px;
      .container_advantages{
         flex-direction: column;
            .advantages{
@@ -362,15 +416,20 @@ main{
        height: max-content;
        flex-wrap: wrap;
        font-size: 1.3rem;
+       padding-bottom: 20px;
        .types_order{
            font-size: 1.6rem;
        }
     }
+   
     .examples {
         flex-wrap: wrap;
-        height: 400px;
         justify-content: space-around;
         align-items: center;
+        padding: 25px 0 25px;
+        .bord {
+            border-right: hidden;
+         }
     }
 
 }
